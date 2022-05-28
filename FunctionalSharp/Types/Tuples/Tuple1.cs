@@ -14,7 +14,7 @@
 		
 		public static Tuple1<T> of(T t) => new Tuple1<T>(t);
 		
-		public override int arity() => 2;
+		public override int arity() => 1;
 		
 		public T _1 => t;
 
