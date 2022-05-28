@@ -1,0 +1,8 @@
+*/bin/*
+*/obj/*
+*.dll
+*.exe
+*.log
+*.suo
+*.txt
+*.vs/*
