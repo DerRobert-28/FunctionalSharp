@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionalSharp", "FunctionalSharp\FunctionalSharp.csproj", "{56F4DD56-CB18-4EFC-9327-08D339A070CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionalSharp", "FunctionalSharp\FunctionalSharp.csproj", "{56F4DD56-CB18-4EFC-9327-08D339A070CB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionalSharpTests", "..\FunctionalSharpTests\FunctionalSharpTests.csproj", "{22FAC3F2-9C67-4655-8A04-5A97954ED03A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionalTests", "..\FunctionalTests\FunctionalTests\FunctionalTests.csproj", "{9B43CCB7-36E0-4136-A8FC-E75EF70EF981}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{22FAC3F2-9C67-4655-8A04-5A97954ED03A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22FAC3F2-9C67-4655-8A04-5A97954ED03A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22FAC3F2-9C67-4655-8A04-5A97954ED03A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B43CCB7-36E0-4136-A8FC-E75EF70EF981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B43CCB7-36E0-4136-A8FC-E75EF70EF981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B43CCB7-36E0-4136-A8FC-E75EF70EF981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B43CCB7-36E0-4136-A8FC-E75EF70EF981}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
