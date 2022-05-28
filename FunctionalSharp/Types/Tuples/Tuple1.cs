@@ -4,21 +4,21 @@
 	
 
 	public class Tuple1 {
-		public static Tuple1<T1> of<T1>(T1 t1) => Tuple1<T1>.of(t1);
+		public static Tuple1<T> of<T>(T t) => Tuple1<T>.of(t);
 	}
 
 
-	public class Tuple1<T1>: ITuple, ITuple1<T1> {
+	public class Tuple1<T>: ITuple, ITuple1<T> {
 
-		private readonly T1 t1;
+		private readonly T t;
 		
-		public static Tuple1<T1> of(T1 t1) => new Tuple1<T1>(t1);
+		public static Tuple1<T> of(T t) => new Tuple1<T>(t);
 		
 		public override int arity() => 2;
 		
-		public T1 _1 => t1;
+		public T _1 => t;
 
-		private Tuple1(T1 t1) => this.t1 = t1;
+		private Tuple1(T t) => this.t = t;
 
 	}
 
