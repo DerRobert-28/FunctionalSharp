@@ -15,7 +15,7 @@
 
 		public static void map<T>(this Value<T> value, Consumer1<T?> mapper) {
 			if(mapper == null) {
-				throw new MappingException("Mapper cannot be NULL");
+				throw MappingException.because("Mapper cannot be NULL");
 			} else if(value != null) {
 				mapper.Invoke(value.Invoke());
 			}
@@ -23,7 +23,7 @@
 
 		public static Value<R> map<T, R>(this Value<T> value, Function1<T?, R> mapper) {
 			if(mapper == null) {
-				throw new MappingException("Mapper cannot be NULL");
+				throw MappingException.because("Mapper cannot be NULL");
 			} else if(value == null) {
 				return none<R>();
 			} else {
@@ -33,11 +33,11 @@
 
 		public static T? get<T>(this Value<T> value) {
 			if(value == null) {
-				throw new EvaluationException("No value present");
+				throw EvaluationException.because("No value present");
 			} else {
 				T? t = value.Invoke();
 				if(t == null) {
-					throw new EvaluationException("No value present");
+					throw EvaluationException.because("No value present");
 				}
 				return t;
 			}

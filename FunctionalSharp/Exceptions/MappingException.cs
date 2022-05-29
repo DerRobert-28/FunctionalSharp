@@ -1,9 +1,9 @@
 ﻿namespace DerRobert.FunctionalSharp.Exceptions {
 
-	public class MappingException: FunctionalException {
+	public class MappingException: FunctionalException<MappingException> {
 
-		public MappingException(string reason): base(reason) {}
-	
+		private MappingException(string reason): base(reason) {}
+
 	}
 
 }

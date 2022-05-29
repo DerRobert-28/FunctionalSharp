@@ -1,8 +1,8 @@
 ﻿namespace DerRobert.FunctionalSharp.Exceptions {
 
-	public class EvaluationException: FunctionalException {
+	public class EvaluationException: FunctionalException<EvaluationException> {
 
-		public EvaluationException(string reason): base(reason) {}
+		private EvaluationException(string reason): base(reason) {}
 
 	}
 
