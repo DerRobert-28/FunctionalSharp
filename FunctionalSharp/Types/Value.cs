@@ -13,11 +13,16 @@
 		public static Value<T> none<T>() => () => default;
 		public static Value<T> some<T>(T value) => () => value;
 
-		public static void map<T>(this Value<T> value, Consumer1<T?> mapper) {
-			if(mapper == null) {
-				throw MappingException.because("Mapper cannot be NULL");
-			} else if(value != null) {
-				mapper.Invoke(value.Invoke());
+		[Obsolete("It is not recommendet to use this feature.")]
+		public static T? get<T>(this Value<T> value) {
+			if(value == null) {
+				throw NoSuchElementException.because("No value present");
+			} else {
+				T? t = value.Invoke();
+				if(t == null) {
+					throw NoSuchElementException.because("No value present");
+				}
+				return t;
 			}
 		}
 
@@ -26,21 +31,18 @@
 				throw MappingException.because("Mapper cannot be NULL");
 			} else if(value == null) {
 				return none<R>();
-			} else {
-				return of(mapper.Invoke(value.Invoke()));
 			}
+			return of(mapper.Invoke(value.Invoke()));
 		}
 
-		public static T? get<T>(this Value<T> value) {
-			if(value == null) {
-				throw EvaluationException.because("No value present");
-			} else {
-				T? t = value.Invoke();
-				if(t == null) {
-					throw EvaluationException.because("No value present");
-				}
-				return t;
+		public static Value<T> peek<T>(this Value<T> value, Consumer1<T?> mapper) {
+			if(mapper == null) {
+				throw MappingException.because("Mapper cannot be NULL");
+			} else if(value == null) {
+				return none<T>();
 			}
+			mapper.Invoke(value.Invoke());
+			return value;
 		}
 
 	}
