@@ -8,6 +8,8 @@
 
 		public static int arity<R>(this Function0<R> f) => 0;
 
+		public static Function0<R> identity<R>(this Function0<R> f) => f;
+
 	}
 
 }
