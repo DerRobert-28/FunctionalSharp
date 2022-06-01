@@ -8,6 +8,7 @@
 
 		public static int arity<R>(this Function0<R> f) => 0;
 
+		public static R identity<R>(this Function0<R> f) => f.Invoke();
 
 	}
 
