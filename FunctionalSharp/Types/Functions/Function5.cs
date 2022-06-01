@@ -9,10 +9,9 @@
 		public static Function2<T4, T5, R> apply<T1, T2, T3, T4, T5, R>(this Function5<T1, T2, T3, T4, T5, R> f, T1 a1, T2 a2, T3 a3) => (a4, a5) => f.apply(a1, a2, a3, a4, a5);
 		public static Function3<T3, T4, T5, R> apply<T1, T2, T3, T4, T5, R>(this Function5<T1, T2, T3, T4, T5, R> f, T1 a1, T2 a2) => (a3, a4, a5) => f.apply(a1, a2, a3, a4, a5);
 		public static Function4<T2, T3, T4, T5, R> apply<T1, T2, T3, T4, T5, R>(this Function5<T1, T2, T3, T4, T5, R> f, T1 a1) => (a2, a3, a4, a5) => f.apply(a1, a2, a3, a4, a5);
+		public static Function5<T1, T2, T3, T4, T5, R> apply<T1, T2, T3, T4, T5, R>(this Function5<T1, T2, T3, T4, T5, R> f) => f;
 
 		public static int arity<T1, T2, T3, T4, T5, R>(this Function5<T1, T2, T3, T4, T5, R> f) => 5;
-
-		public static Function5<T1, T2, T3, T4, T5, R> identity<T1, T2, T3, T4, T5, R>(this Function5<T1, T2, T3, T4, T5, R> f) => f;
 
 	}
 
