@@ -9,8 +9,6 @@
 
 		public static int arity<T, R>(this Function1<T, R> f) => 1;
 
-		public static T identity<T>(this Function1<T, T> f, T t) => t;
-
 	}
 
 }
