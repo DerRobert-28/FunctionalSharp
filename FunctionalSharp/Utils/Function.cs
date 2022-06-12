@@ -13,7 +13,7 @@
 
 
 	public class Function<T> {
-	
+
 		public static Function1<T, T> identity => t => t;
 
 	}
